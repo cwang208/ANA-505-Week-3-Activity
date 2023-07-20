@@ -1,4 +1,3 @@
-# ANA-505-Week-3-Activity
 #This code chunk identifies my working directory 
 #and sets it to where I want to save and fetch files
 #TASK: fill in between the parentheses if needed. 
@@ -9,10 +8,12 @@
 #This brings the 'Titanic' data into my environment from Base R (Run this)
 Titanic
 
+
 #This code saves the Titanic data as a dataframe with a new name
 #TASK: Save the Titanic data as a dataframe with a new name that includes your first name
 #for example I would name my data AnnaTitanic
-ChienchenTitanic<-Titanic
+data(Titanic)
+ChienchenTitanic <- as.data.frame(Titanic)
 ChienchenTitanic
 #This code chunk allows me to see the top 2 rows of my data
 #TASK: Write the code that returns the top rows
@@ -71,8 +72,5 @@ library(ggplot2)
 #Task: replace the dataframe name and column names to create the chart
 #(you should see the chart in the Plots window)
 
-ggplot(ChienchenTitanic, aes(survived,number)) +
+ggplot(ChienchenTitanic, aes(x = Survived, y = Freq)) +
   geom_col()
-ggplot(ChienchenTitanic, aes(notsurvived,number)) +
-  geom_col()
-
